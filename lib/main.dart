@@ -29,11 +29,12 @@ class MyApp extends StatelessWidget {
 
 class EmojiList extends StatelessWidget {
   String getEmojiText() {
-    String out = '';
+    final out = StringBuffer();
     for (int i = 0; i < 100; ++i) {
-      out = out + getRandomWord() + getRandomEmoji();
+      out.write(getRandomWord());
+      out.write(getRandomEmoji());
     }
-    return out;
+    return out.toString();
   }
 
   @override
